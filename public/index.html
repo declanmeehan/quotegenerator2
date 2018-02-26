@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quote Generator</title>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+</head>
+<body id="background" class="#fffde7 yellow lighten-5">
+<div class="container">
+  <div class="row valign-wrapper">
+    <div id="wid" class="col s10 offset-m3 valign">
+      <div class="card medium blue lighten-1">
+        <div class="card-content white-text">
+          <span class="card-title center-align"><u>Quote of The Day</u></span>
+          <div class="response">
+            <div class="textContainer z-depth-1">
+              <h5><i id="quoteText" class="textStyle"></i></h5>
+            </div>
+            <h5 id="quoteHead" class="right-align"></h5>
+          </div>
+          <div id="log">
+         <!--  <p id="quote">quote lives here quote lives here quote lives here quote lives here quote lives here quote lives here quote lives here quote lives here quote lives here quote lives here quote lives here </p> -->
+        </div>
+        <div class="card-action valign-wrapper">
+          <!-- twitter's tweet button -->
+          <a id="twitterContainer" data-text="blah"></Tweet>
+          <!-- end tweet button -->
+
+          <a onclick="quoteFunction()" id="quoteGETJSON" class="valign waves-effect waves-light btn right col m3">New Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <!-- twitter's code adds element id twitter-wjs  -->
+  <script src="https://platform.twitter.com/widgets.js";></script>
+    <!-- end of twitter's code -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
