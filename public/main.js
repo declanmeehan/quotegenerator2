@@ -1,7 +1,7 @@
 /* global $, axios, twttr*/
 const button = document.getElementById("quoteGETJSON");
 const uri =
-  "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
+  "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
 let quoteText = document.getElementById("quoteText");
 let quoteHead = document.getElementById("quoteHead");
 let response = "";
