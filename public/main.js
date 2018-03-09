@@ -1,7 +1,6 @@
 /* global $, axios, twttr*/
 const button = document.getElementById("quoteGETJSON");
-const uri =
-  "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
+
 let quoteText = document.getElementById("quoteText");
 let quoteHead = document.getElementById("quoteHead");
 let response = "";
@@ -11,6 +10,9 @@ let quote = "";
 //grabs from the uri and pust it onto the DOM used on click and on load
 
 function quoteFunction() {
+  let d = Math.random();
+  console.log(d);
+  let uri = `https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&${d}`;
   // removes old share button, couldn't find a more dynamic way.
   $("#twitterContainer iframe").remove();
   if (quoteHead.childNodes.length >= 1) {
@@ -48,4 +50,3 @@ function quoteFunction() {
 }
 //runs on page load
 quoteFunction();
-
